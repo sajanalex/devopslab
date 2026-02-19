@@ -1,0 +1,25 @@
+name: CI
+
+on:
+
+    push: 
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+    workflow_dispatch:
+        
+jobs:
+    build-and-release:
+        runs-on:
+            - ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: run a one line script
+              run: echo Praise the Lord
+
+            - name: run multiline scripts
+              run: 
+                  echo God is Love,
+                  echo Jesus Loves You.
+    
